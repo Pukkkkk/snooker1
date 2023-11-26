@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5361451877429254057}
   - component: {fileID: 4461221643412479457}
   - component: {fileID: 4634872667387502430}
+  - component: {fileID: 1618721666995213487}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -107,3 +108,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1618721666995213487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448688229702826238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974fd90a3f61a444abbb36ffe5a41a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private int playerScore;
-    private int PlayerScore { get { return playerScore; } set { playerScore = value;  } }
+    public int PlayerScore { get { return playerScore; } set { playerScore = value;  } }
 
     [SerializeField]
     private GameObject ballPrefab;
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     private void RotateBall()
     {
         xInput = Input.GetAxis("Horizontal");
-        cueBall.transform.Rotate(new Vector3(0f, xInput, 0f));
+        cueBall.transform.Rotate(new Vector3(0f, xInput/15, 0f));
     }
 
     private void ShootBall()
