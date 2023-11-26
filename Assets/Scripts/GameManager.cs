@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         RotateBall();
-        if (Input.GetKeyDown(KeyCode.space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             ShootBall();
         }
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     private void ShootBall()
     {
         camera.transform.parent = null;
-        Rigidbody rd = cueBall.GetComponent<Rigidbody>();
+        Rigidbody rb = cueBall.GetComponent<Rigidbody>();
         rb.AddRelativeForce(Vector3.forward * 50, ForceMode.Impulse);
         ballLine.SetActive(false);
     }
