@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         camera = Camera.main.gameObject;
+        CameraBehindCueBall();
 
         SetBall(BallColor.Red, 1);
         SetBall(BallColor.Yellow, 2);
@@ -75,5 +76,11 @@ public class GameManager : MonoBehaviour
         Rigidbody rb = cueBall.GetComponent<Rigidbody>();
         rb.AddRelativeForce(Vector3.forward * 50, ForceMode.Impulse);
         ballLine.SetActive(false);
+    }
+
+    private void CameraBehindCueBall()
+    {
+        camera.transform.parent = cueBall.transform;
+        camera.transform.position = cueBall.transform.position + new Vector3(0f, 7f, -10f);
     }
 }
