@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject camera;
+
+    [SerializeField]
+    private TMP_Text scoreText;
     
     public static GameManager instance;
 
@@ -32,6 +35,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+
+        UpdateScoreText();
 
         camera = Camera.main.gameObject;
         CameraBehindCueBall();
@@ -96,5 +101,10 @@ public class GameManager : MonoBehaviour
         CameraBehindCueBall();
         camera.transform.eulerAngles = new Vector3(30f, 0f, 0f);
         ballLine.SetActive(true);
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = $"Player Score : {playerScore}";
     }
 }
